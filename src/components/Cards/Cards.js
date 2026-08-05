@@ -9,10 +9,10 @@ const Cards = ({results}) => {
        display = results.map((x)=>{
         let {id, name, image, location, status} = x;
         return( 
-        <div key={id} className="col-4 position-relative">
-            <div className="">
-                <img src={image} alt={name} className="img-fluid" />
-                <div className="content">
+        <div key={id} className="col-4 mb-4 position-relative">
+            <div className={styles.cards}>
+                <img src={image} alt={name} className={`${styles.img} img-fluid`} />
+                <div className="content p-3">
                     <div className="fs-4 fw-bold mb-4">{name}</div>
                     <div className="">
                         <div className="fs-6">Last Location</div>
@@ -20,10 +20,29 @@ const Cards = ({results}) => {
                     </div>
                 </div>
             </div>
-            <div className=
-                {`${styles.badge} position-absolute badge bg-danger`}>
-                    {status}
-            </div>
+            {(()=>{
+                if (status === "Alive"){
+                    return(
+                        <div className={`${styles.badge} position-absolute badge bg-success`}>
+                            {status}
+                        </div>
+                    )}
+                    
+                else if (status === "Dead"){
+                        return(
+                            <div className={`${styles.badge} position-absolute badge bg-danger`}>
+                                {status}
+                            </div>
+                        )}
+                    
+                else{
+                        return(
+                            <div className={`${styles.badge} position-absolute badge bg-secondary`}>
+                                {status}
+                            </div>
+                        )
+                }
+            })()}
         </div>)}) 
     }
     else{
