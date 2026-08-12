@@ -9,7 +9,7 @@ const Pagination = ({info, setPagenumber, pageNumber}) => {
   };
   useEffect(()=>{
     window.addEventListener("resize", updateDimension);
-    return () => window.remove("resize", updateDimension);
+    return () => window.removeEventListener("resize", updateDimension);
   },[]);
   return (
     <>
