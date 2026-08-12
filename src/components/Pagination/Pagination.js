@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import ReactPaginate from 'react-paginate';
 
-const Pagination = ({info, setPagenumber, pageNumber}) => {
+const Pagination = ({info, setPageNumber, pageNumber}) => {
 
   let [width, setWidth] = useState(window.innerWidth);
   let updateDimension=()=>{
@@ -37,7 +37,7 @@ const Pagination = ({info, setPagenumber, pageNumber}) => {
       pageClassName="page-item"
       pageLinkClassName="page-link"
       activeClassName="active"
-      onPageChange={(data)=>{setPagenumber(data.selected + 1)}}
+      onPageChange={(data)=>{setPageNumber(data.selected + 1)}}
       pageCount={info?.pages}
       marginPagesDisplayed={width < 576 ? 1 : 2}
       pageRangeDisplay={width < 576 ? 1 : 2}

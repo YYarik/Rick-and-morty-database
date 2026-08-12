@@ -78,7 +78,7 @@ const Home = () => {
     
       <Pagination 
         info={info}
-        setPagenumber={setPageNumber}
+        setPageNumber={setPageNumber}
         pageNumber={pageNumber} 
       />
     </div>
