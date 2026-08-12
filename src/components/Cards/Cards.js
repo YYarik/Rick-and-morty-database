@@ -10,8 +10,8 @@ const Cards = ({results, page}) => {
        display = results.map((x)=>{
         let {id, name, image, location, status} = x;
         return( 
-        <Link style={{textDecoration: "none"}}to={`${page}${id}`} key={id} className="col-4 mb-4 position-relative text-dark">
-            <div className={styles.cards}>
+        <Link style={{textDecoration: "none"}}to={`${page}${id}`} key={id} className="col-lg-4 col-md-6 col-12 mb-4 position-relative text-dark">
+            <div className={`${styles.cards} d-flex flex-column justify-content-center`}>
                 <img src={image} alt={name} className={`${styles.img} img-fluid`} />
                 <div className="content p-3">
                     <div className="fs-4 fw-bold mb-4">{name}</div>
