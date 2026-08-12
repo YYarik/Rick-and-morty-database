@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# Rick and Morty Wiki
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Даний проєкт — це база даних про персонажів, епізоди та локації з серіалу Rick and Morty. Додаток побудований на React, використовує відкритий API The Rick and Morty API та має пошук, фільтрацію, пагінацію та навігацію між розділами.
 
-## Available Scripts
+## Що реалізовано
 
-In the project directory, you can run:
+- перегляд списку персонажів;
+- пошук за ім'ям;
+- фільтрація за статусом, статтю та видом;
+- пагінація результатів;
+- сторінка деталей персонажа;
+- розділи "Episodes" і "Location" з вибором конкретного епізоду або локації;
+- навігаційне меню між секціями.
 
-### `npm start`
+## Технології
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React
+- React Router DOM
+- Bootstrap 5
+- Sass
+- React Paginate
+- The Rick and Morty API
+- GitHub Pages
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Встановлення
 
-### `npm test`
+1. Клонувати репозиторій:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git clone https://github.com/YYarik/rick-and-morty-database.git
+cd rick-and-morty-database
+```
 
-### `npm run build`
+2. Встановити залежності:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Запуск локально
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm start
+```
 
-### `npm run eject`
+Після цього відкрийте в браузері:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```text
+http://localhost:3000
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Збірка для продакшн
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm run build
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Готовий build буде збережений у папці `build`.
 
-## Learn More
+## Деплой на GitHub Pages
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+У файлі `package.json` вже налаштовано параметр `homepage` для GitHub Pages. Якщо ваше ім'я користувача GitHub або назва репозиторію інші, змініть значення:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```json
+"homepage": "https://YOUR_USERNAME.github.io/rick-and-morty-database"
+```
 
-### Code Splitting
+Після цього виконайте:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm run deploy
+```
 
-### Analyzing the Bundle Size
+Команда автоматично збере проект і завантажить вміст папки `build` на GitHub Pages.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Структура проєкту
 
-### Making a Progressive Web App
+```text
+src/
+├── App.js
+├── App.css
+├── index.css
+├── index.js
+├── components/
+│   ├── Cards/
+│   ├── Filters/
+│   ├── Navbar/
+│   ├── Pagination/
+│   └── Search/
+├── Pages/
+│   ├── Episodes.js
+│   └── Location.js
+└── ...
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Примітки
 
-### Advanced Configuration
+- Для GitHub Pages використовується `HashRouter`, щоб маршрути працювали коректно на статичному хостингу.
+- Дані завантажуються з відкритого API The Rick and Morty API.
+- Проєкт підходить для навчальних цілей, демонстрації React-стеку та практики роботи з API.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Автор
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Проєкт створено як навчальний React-додаток для роботи з API та маршрутизацією.

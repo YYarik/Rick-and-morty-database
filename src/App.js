@@ -7,7 +7,7 @@ import Pagination from './components/Pagination/Pagination';
 import Search from './components/Search/Search';
 import Navbar from './components/Navbar/Navbar';
 
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import { HashRouter as Router, Routes, Route } from "react-router-dom"
 import Episodes from './Pages/Episodes';
 import Location from './Pages/Location';
 import CardDetails from './components/Cards/CardDetails';
